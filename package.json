@@ -8,6 +8,8 @@
     "start": "ts-node src/index.ts",
     "dev": "tsc-watch --onSuccess \"node ./dist/index.js\"",
     "dev2": "nodemon src/index.ts",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "build": "tsc",
     "lint": "eslint --fix src test",
     "test": "jest --watchAll"
